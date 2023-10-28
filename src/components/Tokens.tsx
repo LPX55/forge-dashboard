@@ -83,7 +83,7 @@ export function Tokens() {
                         <Table.Td display="table-cell"><PriceDelta changeUSD={row.priceUSDChange24Hr} />
                         <Text fw="500" fz="xs" ml="8px" span inline>{Math.abs(row.priceChange24Hr).toFixed(2)}%</Text></Table.Td>
                         <Table.Td>
-                        <Sparklines data={row.priceUSDArray} limit={14} width={140} height={30} margin={4}  preserveAspectRatio="xMidYMid" svgHeight={40}>
+                        <Sparklines data={row.priceUSDArray} limit={14} width={120} height={30} margin={4}  preserveAspectRatio="xMidYMid" svgHeight={40}>
                             <SparklinesLine color="#c1c2c5" />
                         </Sparklines>
                         </Table.Td>

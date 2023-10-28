@@ -1,5 +1,5 @@
 .root {
-    padding: calc(var(--mantine-spacing-xl) * 1.1);
+    padding: calc(var(--mantine-spacing-xl) * 0.9);
   }
   
   .value {
