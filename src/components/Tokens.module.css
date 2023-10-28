@@ -1,0 +1,34 @@
+
+.priceDeltaUp {
+        color: #37B24D !important;
+    }
+
+.priceDeltaDown {
+        color: #E03131 !important;
+    };
+    .root {
+        padding: calc(var(--mantine-spacing-xl) * 1.1);
+      }
+      
+      .value {
+        font-size: rem(20px);
+        font-weight: 500;
+        line-height: 1;
+      }
+      
+      .diff {
+        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+      }
+      
+      .icon {
+        color: light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-3));
+      }
+      
+      .title {
+        font-weight: 500;
+        font-size: rem(20px);
+
+        text-transform: uppercase;
+      }

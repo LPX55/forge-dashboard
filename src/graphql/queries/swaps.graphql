@@ -1,0 +1,19 @@
+query Swaps($first: Int = 5, $skip: Int = 0, $orderBy: Swap_orderBy = timestamp, $orderDirection: OrderDirection = desc) {
+  swaps(orderBy: $orderBy, first: $first, skip: $skip, orderDirection: $orderDirection) {
+    id
+    timestamp
+    amount0
+    amount1
+    amountUSD
+    sender
+    recipient
+    token0 {
+      name
+      symbol
+    }
+    token1 {
+      name
+      symbol
+    }
+  }
+}

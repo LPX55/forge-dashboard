@@ -1,0 +1,14 @@
+query Tokens($first: Int = 15, $skip: Int = 0, $orderBy: Token_orderBy = totalValueLockedUSD, $orderDirection: OrderDirection = desc) {
+  tokens(orderBy: $orderBy, first: $first, skip: $skip, orderDirection: $orderDirection) {
+    id
+    name
+    symbol
+    totalValueLocked
+    totalValueLockedUSD
+    tokenDayData(first: 14, skip: 0, orderBy: date, orderDirection: desc) {
+      priceUSD
+      volumeUSD
+      date
+    }
+  }
+}

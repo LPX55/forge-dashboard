@@ -1,0 +1,14 @@
+.main{
+    width: "100%";
+    padding: calc(var(--mantine-spacing-xl) * 1.5) !important;
+  }
+  .navbar{
+    background-color: #6f6f6f15;
+}
+.panel{
+    padding-top: 1.5rem !important;
+
+    .pagination{
+        padding-top: 1.5rem !important;
+    }
+}
