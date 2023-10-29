@@ -32,3 +32,8 @@
 
         text-transform: uppercase;
       }
+
+      .symbol{
+        font-weight: 700;
+        font-size: rem(20px);
+      }

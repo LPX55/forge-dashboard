@@ -62,10 +62,8 @@ export function StatsGrid(fallback) {
     });
     const weeklyVol = historicalVol.slice(-7);
     const sumOfVol = weeklyVol.reduce((total, entry) => total + entry.vol, 0);
-    console.log(ChainData);
 
     const changeVol = getChange(sumOfVol, VolData.total14dto7d).toFixed(3)
-    console.log(historicalVol)
     dataMap[1].value = formatUSD(sumOfVol);
     dataMap[1].diff = changeVol;
     dataMap[1].sparkData = historicalVol.map(entry => entry.vol);
@@ -82,7 +80,6 @@ export function StatsGrid(fallback) {
         tvl: entry.tvl
       };
     });
-    console.log(VolData)
   }
   const stats = dataMap.map((stat) => {
     const Icon = icons[stat.icon];
