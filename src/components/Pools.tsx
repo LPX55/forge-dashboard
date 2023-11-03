@@ -2,9 +2,9 @@ import { useLazyQuery } from '@apollo/client';
 import { Button, Group, Pagination, Stack, Table } from '@mantine/core';
 import { PoolsDocument, PoolsQuery } from '../graphql/queries/pools.graphql.interface';
 import { useEffect, useMemo } from 'react';
-import { formatUSD } from '../lib/currency';
+import { formatUSD } from '../utils/currency';
 import { PaginationContext, usePagination } from '../lib/usePagination';
-import { notifyError } from '../lib/notifications';
+import { notifyError } from '../utils/notifications';
 import { TableSkeleton } from './TableSkeleton';
 
 //TODO env

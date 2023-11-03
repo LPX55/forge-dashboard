@@ -1,6 +1,6 @@
 import { Anchor, Button, Group, Pagination, Stack, Table } from '@mantine/core';
 import { Duration } from '../lib/duration';
-import { formatToken, formatUSD } from '../lib/currency';
+import { formatToken, formatUSD } from '../utils/currency';
 import { shortenAddress } from '../lib/address';
 import { useLazyQuery } from '@apollo/client';
 import { SwapsDocument, SwapsQuery } from '../graphql/queries/swaps.graphql.interface';

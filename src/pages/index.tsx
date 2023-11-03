@@ -31,11 +31,9 @@ const IndexPage: NextPage = () => {
           <Tabs color="rgba(237, 78, 51, 1)" variant="pills" defaultValue={Tab.TOKENS} value={activeTab} onChange={setActiveTab} classNames={classes}>
               <Tabs.List>
                 <Tabs.Tab value={Tab.TOKENS}>Tokens</Tabs.Tab>
-                <Tabs.Tab value={Tab.SWAPS}>Swaps</Tabs.Tab>
                 <Tabs.Tab value={Tab.REFRESH} ml="auto" p="0" display={'block'} className="refreshTab"></Tabs.Tab>
               </Tabs.List>
 
-            <Tabs.Panel value={Tab.SWAPS}><Swaps /></Tabs.Panel>
             <Tabs.Panel value={Tab.TOKENS}><Tokens /></Tabs.Panel>
           </Tabs>
     </Stack>

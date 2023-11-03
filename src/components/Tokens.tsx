@@ -1,10 +1,9 @@
 import { useMantineTheme, Pagination, Stack, Table, Text, Group, Button, Portal } from '@mantine/core';
 import { useEffect, useMemo, useState } from 'react';
-import { formatUSD } from '../lib/currency';
+import { formatUSD } from '../utils/currency';
 import { useLazyQuery } from '@apollo/client';
 import { TokensDocument, TokensQuery } from '../graphql/queries/tokens.graphql.interface';
 import { PaginationContext, usePagination } from '../lib/usePagination';
-import { notifyError } from '../lib/notifications';
 import { TableSkeleton } from './TableSkeleton';
 import { Sparklines, SparklinesLine } from 'react-sparklines';
 import '@mantine/core/styles/Table.css';
@@ -43,7 +42,7 @@ export function Tokens() {
 
     useEffect(() => {
         if (topTokensContext.error !== undefined) {
-            notifyError(
+            console.log(
                 "Tokens Issue",
                 "We're having trouble loading top tokens. Please refresh in a minute.",
                 topTokensContext.error
@@ -154,7 +153,7 @@ function useTopTokens(pagination: PaginationContext): UseRecentTokensContext {
 }
 
 
-function transformQueryResults(data: TokensQuery, removeToken: string[]): Row[] | undefined {
+function transformQueryResults(data: TokensQuery | undefined, removeToken: string[]): Row[] | undefined {
 
 
     const transformedData = data?.tokens?.map(token => {
